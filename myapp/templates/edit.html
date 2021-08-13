@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Index</title>
+    </head>
+    <body>
+    <form method="POST" class="post-form" action="/update/{{md.id}}">
+            {% csrf_token %}
+        <h1>Update Details</h1>
+        <br>
+        <label>Student Number:</label>
+            <input type="integer" name="STUDENT_NO" id="id_no" value="{{ md.STUDENT_NO }}"/>
+        <br>
+        <label>Student Name:</label>
+            <input type="text" name="STUDENT_NAME" id="id_name" required maxlength="30" value="{{ md.STUDENT_NAME }}" />
+        <br>
+        <label >Student DOB:</label>
+            <input type="date" name="STUDENT_DOB" id="id_dob" value="{{ md.STUDENT_DOB }}" />
+        <br>
+        <label >Student DOJ:</label>
+            <input type="date" name="STUDENT_DOJ" id="id_doj" value="{{ md.STUDENT_DOJ }}" />
+        <br>
+        <button type="submit" class="btn btn-success">Update</button>
+    </form>
+    </body>
+    </html>

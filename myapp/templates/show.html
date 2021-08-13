@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Student Records</title>
+    </head>
+    <body>
+    <table class="table table-striped table-bordered table-sm">
+        <thead class="thead-dark">
+        <tr>
+            <th>Student Number</th>
+            <th>Student Name</th>
+            <th>Student DOB</th>
+            <th>Student DOJ</th>
+        </tr>
+        </thead>
+        <tbody>
+    {% for studs in md %}
+        <tr>
+            <td>{{ studs.STUDENT_NO }}</td>
+            <td>{{ studs.STUDENT_NAME }}</td>
+            <td>{{ studs.STUDENT_DOB }}</td>
+            <td>{{ studs.STUDENT_DOJ }}</td>
+            <td>
+                <a href="/edit/{{ studs.id }}"><span>Edit</span></a>
+                <a href="/delete/{{ studs.id }}"><span>Delete</span></a>
+            </td>
+        </tr>
+    {% endfor %}
+        </tbody>
+    </table>
+    <br>
+    <br>
+    <center><a href="/my_form" class="btn btn-primary">Add New Record</a></center>
+    </body>
+    </html>

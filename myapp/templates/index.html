@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+</head>
+<body>
+<form method="POST" class="post-form" action="/my_form">
+        {% csrf_token %}
+    <h3>Enter Details</h3>
+    <br>
+    <label >Student Number:</label>
+      {{ form.STUDENT_NO }}
+    <br>
+    <label >Student Name:</label>
+      {{ form.STUDENT_NAME }}
+    <br>
+    <label >Student DOB:</label>
+      {{ form.STUDENT_DOB }}
+    <br>
+    <label >Student DOJ:</label>
+      {{ form.STUDENT_DOJ }}
+    <br>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</body>
+</html>
